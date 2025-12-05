@@ -1,4 +1,4 @@
-name: Semgrep Security Scan
+name: Semgrep Security Scan (Django)
 
 on:
   pull_request:
@@ -21,7 +21,8 @@ jobs:
           semgrep ci \
             --config=p/default \
             --config=p/owasp-top-ten \
-            --config=p/java \
+            --config=p/python \
+            --config=p/django \
             --metrics=off \
             --output=semgrep.txt \
             --verbose
